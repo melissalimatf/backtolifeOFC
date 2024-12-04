@@ -1,12 +1,11 @@
 from flask import Blueprint, request, jsonify, render_template
 from models import Usuario, db
 import bcrypt
-import jwt
 from datetime import datetime, timedelta
+from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity
 
 # Configurações do JWT
 SECRET_KEY = "F023401823AJ84123840238482H384B12831230498123"  # Substitua por uma chave secreta segura
-ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRES = timedelta(hours=1)  # Tempo de expiração do token
 
 user_blueprint = Blueprint('user', __name__)
@@ -84,24 +83,19 @@ def login():
     if not bcrypt.checkpw(senha.encode('utf-8'), usuario.senha.encode('utf-8')):
         return jsonify({"error": "Credenciais inválidas"}), 401
 
-    # Gera o token JWT
-    token_payload = {
-        "user_id": usuario.id,
-        "email": usuario.email,
-        "exp": datetime.utcnow() + ACCESS_TOKEN_EXPIRES
-    }
-    # Decodifica o token para string
-    token = jwt.encode(token_payload, SECRET_KEY, algorithm=ALGORITHM).decode('utf-8')
+    # Gera o token JWT usando Flask-JWT-Extended
+    access_token = create_access_token(identity=usuario.id, expires_delta=ACCESS_TOKEN_EXPIRES)
 
     return jsonify({
         "message": "Login realizado com sucesso",
-        "access_token": token,
+        "access_token": access_token,
         "user": usuario.to_dict()
     }), 200
 
 
-# Atualizar usuário
+# Atualizar usuário (Exemplo com autorização)
 @user_blueprint.route('/users/<int:user_id>', methods=['PUT'])
+@jwt_required()  # Protege a rota, só pode ser acessada com um token válido
 def update_user(user_id):
     data = request.json
     usuario = Usuario.query.get(user_id)
@@ -126,8 +120,9 @@ def update_user(user_id):
         return jsonify({"error": str(e)}), 500
 
 
-# Excluir usuário
+# Excluir usuário (Exemplo com autorização)
 @user_blueprint.route('/users/<int:user_id>', methods=['DELETE'])
+@jwt_required()  # Protege a rota, só pode ser acessada com um token válido
 def delete_user(user_id):
     usuario = Usuario.query.get(user_id)
 
@@ -148,7 +143,14 @@ def login_page():
     return render_template('login.html')
 
 
-# Rota para exibir o perfil do usuário
+# Rota para exibir o perfil do usuário (Exemplo com autorização)
 @user_blueprint.route('/perfil', methods=['GET'])
+@jwt_required()  # Protege a rota, só pode ser acessada com um token válido
 def perfil():
-    return render_template('perfil.html')
+    current_user_id = get_jwt_identity()  # Pega a identidade do usuário no token JWT
+    usuario = Usuario.query.get(current_user_id)
+
+    if not usuario:
+        return jsonify({"error": "Usuário não encontrado"}), 404
+
+    return render_template('perfil.html', user=usuario)
