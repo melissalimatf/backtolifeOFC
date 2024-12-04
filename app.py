@@ -1,11 +1,20 @@
+import os
 from flask import Flask, render_template
 from models import db
 from routes import user_blueprint
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# Diretório do banco de dados
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+DB_DIR = os.path.join(BASE_DIR, 'var', 'app-instance')
+DB_PATH = os.path.join(DB_DIR, 'database.db')
 
+# Garante que o diretório do banco de dados existe
+os.makedirs(DB_DIR, exist_ok=True)
+
+# Configuração do Flask
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_PATH}'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db.init_app(app)
 
 with app.app_context():
