@@ -1,4 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 
 db = SQLAlchemy()
 
@@ -12,9 +13,18 @@ class Usuario(db.Model):
     nome_usuario = db.Column(db.String(100), nullable=True)  # Apenas para casas de reabilitação
     cpf_usuario = db.Column(db.String(11), unique=True, nullable=True)  # CPF do usuário
     email = db.Column(db.String(120), unique=True, nullable=False)
-    senha = db.Column(db.String(100), nullable=False)  # Senha não encriptada conforme solicitado
+    senha = db.Column(db.String(100), nullable=False)  # Senha encriptada
+
+    def set_password(self, password):
+        """Encripta e armazena a senha."""
+        self.senha = generate_password_hash(password)
+
+    def check_password(self, password):
+        """Verifica a senha encriptada."""
+        return check_password_hash(self.senha, password)
 
     def to_dict(self):
+        """Retorna os dados do usuário, excluindo a senha."""
         return {
             "id": self.id,
             "tipo_instituicao": self.tipo_instituicao,
