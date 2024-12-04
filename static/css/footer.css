@@ -1,0 +1,60 @@
+
+
+footer.main-footer {
+  margin-top: auto;
+}
+
+  .main-footer {
+    background-color: #010928!important;
+    overflow: hidden;
+     bottom: 0;
+  }
+  .logo-image{
+    width: 100px;
+    margin-left: -28px;
+  }
+  .icon-instagram{
+    border-radius: 7px;
+    margin-left: 15px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  }
+  .main-footer h1{
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--bs-gray-400);
+  }
+  .main-footer a,
+  .main-footer li {
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 2rem;
+  
+  }
+  .copy{
+    line-height: 1rem;
+    font-size: 11px;
+  }
+  .logoFooterContainer{
+    margin-bottom: 35px;
+    margin-top: 35px!important;
+    margin-left: -26px!important;
+  }
+  @media (max-width: 990px){
+  
+  .navbar-navCss {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+  }
+  
+  .custom-li {
+    width: 20%;
+  }
+  .span-local-diferente{
+    margin-top: 0px;
+   
+   }
+  }  

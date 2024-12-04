@@ -1,0 +1,334 @@
+
+.container-principal{
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+.video-container {
+    height: 480px;
+    background-color: #000;
+    position: relative;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+.title-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 8px;
+    text-align: left;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+.title-container h2 {
+    font-size: 2.5rem;
+    color: #2d3e50;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.title-container h5 {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.title-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+.title-container label {
+    font-size: 1rem;
+    color: #2d3e50;
+}
+
+.title-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.title-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+.col-md-4 {
+    position: relative;
+}
+.blocked-list {
+    max-height: 600px; /* Define a altura máxima da área de rolagem */
+    overflow-y: auto; /* Adiciona a barra de rolagem vertical */
+    padding-right: 1em; /* Espaço para evitar sobreposição da barra de rolagem */
+    scrollbar-width: thin; /* Personaliza a largura da barra de rolagem (Firefox) */
+    scrollbar-color: #1d369b #e0e0e0; /* Cor da barra e do fundo (Firefox) */
+}
+
+.blocked-list::-webkit-scrollbar {
+    width: 8px; /* Largura da barra de rolagem no Chrome/Safari */
+}
+
+.blocked-list::-webkit-scrollbar-track {
+    background: #e0e0e0; /* Cor do fundo da barra de rolagem */
+}
+
+.blocked-list::-webkit-scrollbar-thumb {
+    background-color: #1d369b; /* Cor da barra */
+    border-radius: 10px; /* Deixa a barra arredondada */
+}
+
+.card-style {
+    position: relative;
+    display: flex;
+    width: 500px;
+    padding: 10px;
+    border-radius: 6px;
+    gap: 0.5rem;
+    height: max-content;
+    border: 1px solid #bebebe;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .card_form {
+    position: relative;
+    min-width: 5em;
+    min-height: 5em;
+    border-radius: 4px;
+    background-color: #1d369b;
+    transition: 0.2s ease-in-out;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lock-icon {
+    font-size: 2.5em;
+    color: rgb(88, 82, 204); 
+}
+
+.card_data {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.access-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em; 
+    background-color: #1d369b; 
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.1em 0.8em;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; 
+    
+}
+.access-button i{
+   font-size: 1.3rem;
+}
+.access-button:hover {
+    background-color: #3a54bd; 
+}
+
+.text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 0.5em;
+    color: rgb(64, 64, 64);
+  }
+  .text_m {
+    font-size: 0.9em;
+  }
+  .text_s {
+    color: #1d369b;
+    font-size: 0.6em;
+  }
+  .text_d {
+    font-size: 0.7em;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    width: 80%;
+  }
+
+  .cube {
+    width: max-content;
+    height: 10px;
+    transition: all 0.2s;
+    transform-style: preserve-3d;
+  }
+  .card-style:hover .cube {
+    transform: rotateX(90deg);
+  }
+  .side {
+    width: max-content;
+    height: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+  }
+  .top {
+    transform: rotateX(-90deg) translate3d(0, 0, 0em);
+  }
+  .front {
+    transform: translate3d(0, 0, 1em);
+  }
+  .div-btn{
+    display: inline-flex;
+    align-items: end;
+  }
+
+
+.voice-chat-card {
+    width: 100%;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #ccc;
+    padding: 10px;
+    background-color: #e8e8e8;
+  }
+
+  .voice-chat-card-body {
+    padding: 10px;
+  }
+  
+  .status-text {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .audio-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  audio {
+    width: 100%;
+  }
+
+.video-placeholder {
+    height: 380px;
+    background-color: #3550a7; /* Cor de fundo para o placeholder */
+    position: relative; /* Necessário para centralizar elementos com absolute */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza usando Flexbox */
+    border-radius: 10px;
+    overflow: hidden; /* Opcional: para evitar elementos saindo dos limites */
+    cursor: pointer;
+}
+
+.play-icon {
+    font-size: 3rem; /* Tamanho do ícone */
+    color: rgba(255, 255, 255, 0.7); /* Cor do ícone */
+    border-radius: 50%; /* Transformar em círculo */
+    padding: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza o ícone dentro da bolha */
+    position: absolute; /* Fixado em relação ao `.video-placeholder` */
+    top: 50%; /* Move o ícone 50% da altura do container */
+    left: 50%; /* Move o ícone 50% da largura do container */
+    transform: translate(-50%, -50%); /* Ajusta para centralização exata */
+}
+/* From Uiverse.io by Yaya12085 */ 
+.card-not {
+  max-width: 500px;
+  border-width: 1px;
+  border-radius: 1rem;
+  background-color:rgb(223, 234, 250);
+  padding: 0.8rem;
+}
+
+.header-not {
+  display: flex;
+  align-items: start;
+  grid-gap: 1rem;
+  gap: 1rem;
+}
+
+.icon-not {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background-color: rgba(96, 165, 250, 1);
+  padding: 0.5rem;
+  color: rgba(255, 255, 255, 1);
+}
+
+.icon-not svg {
+  height: 1rem;
+  width: 1rem;
+}
+
+.alert-not {
+  color: rgb(36, 35, 35);
+  font-size: 13px;
+}
+
+.actions-not {
+  margin-top: 1.5rem;
+}
+
+.actions-not a {
+  text-decoration: none;
+}
+
+.mark-as-read, .read {
+  display: inline-block;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+}
+
+.read {
+  background-color: rgba(59, 130, 246, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.mark-as-read {
+  margin-top: 0.5rem;
+  background-color: rgba(249, 250, 251, 1);
+  color: rgba(107, 114, 128, 1);
+  transition: all .15s ease;
+}
+
+.mark-as-read:hover {
+  background-color: rgb(230, 231, 233);
+}

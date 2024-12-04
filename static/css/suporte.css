@@ -1,0 +1,74 @@
+
+.conteudo{
+    background-color: #fff;
+
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.conteudo h1{
+    color: #15519A;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.conteudo h2 {
+    color: #767676;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+.conteudo p {
+    letter-spacing: 0.4px;
+  }
+  
+.social {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-decoration: none;
+    border: solid rgb(214, 213, 213) 1px;
+    border-radius: 20px;
+    margin: 30px;
+    padding: 40px;
+}
+  
+.social img {
+    width: 100px;
+}
+
+.contato {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+  
+.contato ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 100px;
+}
+  
+.contato li {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.contato li:hover {
+    transform: translateY(-5px);
+}
+.contato img {
+    width: 70px;
+    margin-bottom: 30px;
+}
+
+.contato a{
+    text-decoration: none;
+    color: black;
+}

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página com Vídeo e Lista de Vídeos Bloqueados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .video-container {
+            height: 70vh;
+            background-color: #000;
+            position: relative;
+        }
+
+        .video-container iframe {
+            width: 100%;
+            height: 100%;
+        }
+
+        .title-container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .blocked-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .blocked-list li {
+            background-color: #f8f9fa;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .blocked-list li.blocked {
+            background-color: #e0e0e0;
+            color: #888;
+            pointer-events: none;
+        }
+
+        .login-message {
+            color: red;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container-fluid">
+    <div class="row">
+        <!-- Coluna esquerda: Vídeo principal -->
+        <div class="col-md-8 video-container">
+            <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="title-container">
+                <h2>Título do Vídeo</h2>
+                <p>Subtítulo do Vídeo</p>
+            </div>
+        </div>
+
+        <!-- Coluna direita: Lista de vídeos bloqueados -->
+        <div class="col-md-4">
+            <h3>Vídeos Bloqueados</h3>
+            <div class="login-message" id="login-message">
+                <p>Você precisa estar logado para acessar esses vídeos.</p>
+            </div>
+            <ul class="blocked-list">
+                <li class="blocked">Vídeo 1 - Bloqueado</li>
+                <li class="blocked">Vídeo 2 - Bloqueado</li>
+                <li class="blocked">Vídeo 3 - Bloqueado</li>
+                <li class="blocked">Vídeo 4 - Bloqueado</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para Login (simulação) -->
+<div class="modal" tabindex="-1" id="loginModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Login Necessário</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Entrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    // Função para simular o login e desbloquear os vídeos
+    document.getElementById('login-form').addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        // Simular que o usuário fez login
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+        
+        if (email && password) {
+            alert('Login bem-sucedido!');
+            // Remover o bloqueio dos vídeos após o login
+            document.querySelectorAll('.blocked').forEach(item => {
+                item.classList.remove('blocked');
+            });
+            document.getElementById('loginModal').modal('hide');
+        } else {
+            alert('Por favor, preencha todos os campos!');
+        }
+    });
+
+    // Simula o comportamento de bloquear os vídeos
+    setTimeout(function() {
+        document.querySelectorAll('.blocked').forEach(item => {
+            item.style.pointerEvents = 'none'; // Impede a interação com os vídeos bloqueados
+        });
+    }, 1000);
+</script>
+
+</body>
+</html>

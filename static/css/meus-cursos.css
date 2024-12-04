@@ -1,0 +1,37 @@
+
+.custom li{
+    background-color: rgb(224, 232, 247);
+    width: 8%;
+    padding: 10px;
+    border-radius: 28px;
+    text-align: center;
+    font-weight: 600;
+    color: #15519A;
+    font-size: 15px;
+}
+.favoritados-container h1 {
+    color: #15519A;
+    font-size: 43px;
+    font-weight: 700;
+}
+.favoritados-container h3 {
+    color: #414142;
+    font-size: 1.2rem;
+    font-weight:400;
+}
+.favoritados-container img{
+    height: 350px;
+    width: auto;
+    object-fit: cover;
+}
+.team-page img{
+    border-radius: 15px;
+    height: 200px;
+    width: 380px;
+    object-fit: cover;
+}
+.team-page h1{
+    color: #000;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
