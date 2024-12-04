@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: BackToLifeOFC API
   version: 0.0.1
-  description: API para gerenciamento da plataforma backtolife, incluindo registro, login, atualização e exclusão.
+  description: API para gerenciamento da plataforma BackToLife, incluindo registro, login, atualização e exclusão.
 servers:
   - url: http://localhost:5000
 
@@ -59,6 +59,81 @@ paths:
                   error:
                     type: string
                     example: Instituição de ensino já cadastrada com este CPF/CNPJ
+        '500':
+          description: Erro no servidor
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Erro interno do servidor
+
+  /login:
+    post:
+      summary: Realiza login de um usuário
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: E-mail do usuário
+                senha:
+                  type: string
+                  description: Senha do usuário
+      responses:
+        '200':
+          description: Login realizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Login realizado com sucesso
+                  access_token:
+                    type: string
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      nome_instituicao:
+                        type: string
+                      cpf_cnpj:
+                        type: string
+                      nome_usuario:
+                        type: string
+                      cpf_usuario:
+                        type: string
+                      email:
+                        type: string
+        '401':
+          description: Credenciais inválidas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Credenciais inválidas
+        '404':
+          description: Usuário não encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Usuário não encontrado
 
   /users/{user_id}:
     put:
@@ -116,6 +191,16 @@ paths:
                   error:
                     type: string
                     example: Usuário não encontrado
+        '500':
+          description: Erro no servidor
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Erro interno do servidor
 
     delete:
       summary: Exclui um usuário
@@ -147,51 +232,8 @@ paths:
                   error:
                     type: string
                     example: Usuário não encontrado
-
-  /login:
-    post:
-      summary: Realiza login de um usuário
-      requestBody:
-        required: true
-        content:
-          application/x-www-form-urlencoded:
-            schema:
-              type: object
-              properties:
-                email:
-                  type: string
-                  description: E-mail do usuário
-                senha:
-                  type: string
-                  description: Senha do usuário
-      responses:
-        '200':
-          description: Login realizado com sucesso
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Login realizado com sucesso
-                  user:
-                    type: object
-                    properties:
-                      id:
-                        type: integer
-                      nome_instituicao:
-                        type: string
-                      cpf_cnpj:
-                        type: string
-                      nome_usuario:
-                        type: string
-                      cpf_usuario:
-                        type: string
-                      email:
-                        type: string
-        '401':
-          description: Credenciais inválidas
+        '500':
+          description: Erro no servidor
           content:
             application/json:
               schema:
@@ -199,4 +241,4 @@ paths:
                 properties:
                   error:
                     type: string
-                    example: Credenciais inválidas
+                    example: Erro interno do servidor
