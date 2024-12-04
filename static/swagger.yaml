@@ -1,0 +1,202 @@
+openapi: 3.0.0
+info:
+  title: BackToLifeOFC API
+  version: 0.0.1
+  description: API para gerenciamento da plataforma backtolife, incluindo registro, login, atualização e exclusão.
+servers:
+  - url: http://localhost:5000
+
+paths:
+  /register:
+    post:
+      summary: Registra um novo usuário
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                clientType:
+                  type: string
+                  description: Tipo de instituição (education ou rehab)
+                nome_instituicao:
+                  type: string
+                  description: Nome da instituição
+                cpf_cnpj:
+                  type: string
+                  description: CPF ou CNPJ da instituição
+                nome_usuario:
+                  type: string
+                  description: Nome do usuário (apenas para rehab)
+                cpf_usuario:
+                  type: string
+                  description: CPF do usuário (apenas para rehab)
+                email:
+                  type: string
+                  description: E-mail do usuário
+                senha:
+                  type: string
+                  description: Senha do usuário
+      responses:
+        '201':
+          description: Cadastro realizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Cadastro realizado com sucesso
+        '400':
+          description: Erro nos dados enviados
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Instituição de ensino já cadastrada com este CPF/CNPJ
+
+  /users/{user_id}:
+    put:
+      summary: Atualiza informações de um usuário
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID do usuário
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome_instituicao:
+                  type: string
+                  description: Nome da instituição
+                cpf_cnpj:
+                  type: string
+                  description: CPF ou CNPJ da instituição
+                nome_usuario:
+                  type: string
+                  description: Nome do usuário
+                cpf_usuario:
+                  type: string
+                  description: CPF do usuário
+                email:
+                  type: string
+                  description: E-mail do usuário
+                senha:
+                  type: string
+                  description: Senha do usuário
+      responses:
+        '200':
+          description: Usuário atualizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Usuário atualizado com sucesso
+        '404':
+          description: Usuário não encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Usuário não encontrado
+
+    delete:
+      summary: Exclui um usuário
+      parameters:
+        - name: user_id
+          in: path
+          required: true
+          schema:
+            type: integer
+          description: ID do usuário
+      responses:
+        '200':
+          description: Usuário excluído com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Usuário excluído com sucesso
+        '404':
+          description: Usuário não encontrado
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Usuário não encontrado
+
+  /login:
+    post:
+      summary: Realiza login de um usuário
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              properties:
+                email:
+                  type: string
+                  description: E-mail do usuário
+                senha:
+                  type: string
+                  description: Senha do usuário
+      responses:
+        '200':
+          description: Login realizado com sucesso
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: Login realizado com sucesso
+                  user:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      nome_instituicao:
+                        type: string
+                      cpf_cnpj:
+                        type: string
+                      nome_usuario:
+                        type: string
+                      cpf_usuario:
+                        type: string
+                      email:
+                        type: string
+        '401':
+          description: Credenciais inválidas
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  error:
+                    type: string
+                    example: Credenciais inválidas
