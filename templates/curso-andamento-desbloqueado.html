@@ -81,84 +81,6 @@
     </div>
   </header>
 
-  <!-- Login/Registro Modal -->
-  <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="authModalLabel">Faça login ou cadastro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="area-form">
-            <div class="form-container">
-              <div class="tabs">
-                  <div class="tab active" data-target="register-form">Cadastro</div>
-                  <div class="tab" data-target="login-form">Login</div>
-              </div>
-              <div class="form-content active">
-                  <form>
-                    <div class="form-group">
-                      <h6>Qual é o seu tipo de instituição?</h6>
-                      <div>
-                        <label class="size"><input type="radio" style="margin-right: 6px;" name="clientType" value="rehab">Sou uma Casa de Reabilitação</label><br>
-                        <label class="size"><input type="radio" style="margin-right: 6px;" name="clientType" value="education">Sou uma Instituição de Ensino</label><br>
-                      </div>
-                     </div>
-                      
-                      <div class="form-group hidden" id="rehabFields">
-                          <label for="rehabName">Nome da casa</label>
-                          <input type="text" id="rehabName" name="nome_instituicao" class="input-form mb-3" placeholder="Digite o nome da Casa de Reabilitação">
-                          <label for="rehabCnpj">CPF/CNPJ da casa</label>
-                          <input type="text" id="casa-CPF-CNPJ" name="cpf_cnpj" class="input-form mb-3" placeholder="Digite o CPF/CNPJ da casa">
-                  
-                          <label for="rehabName">Nome do usuário</label>
-                          <input type="text" id="usuarioName" name="nome_usuario" class="input-form mb-3" placeholder="Digite o nome do usuário">
-                          <label for="rehabCnpj">CPF do usuário</label>
-                          <input type="text" id="usuarioCPF" name="cpf_usuario" class="input-form" placeholder="Digite o CPF do usuário">
-                      </div>
-                      <div class="form-group hidden" id="educationFields">
-                          <label for="eduName">Nome</label>
-                          <input type="text" id="eduName" name="nome_instituicao" class="input-form mb-3" placeholder="Digite o nome da Instituição de Ensino">
-                          <label for="eduCnpj">CPF/CNPJ</label>
-                          <input type="text" id="eduCnpj" name="cpf_cnpj" class="input-form" placeholder="Digite o CPF ou CNPJ">
-                      </div>
-        
-                      <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" class="input-form" placeholder="Digite seu e-mail">
-                      </div>
-                      <div class="form-group">
-                          <label for="name">Senha</label>
-                          <input type="text" id="senha" name="senha" class="input-form" placeholder="Digite sua senha">
-                      </div>
-                      <button type="submit" class="button-login">Cadastrar</button>
-                  </form>
-              </div>
-              <div class="form-content" id="login-form">
-               
-                  <h6 id="recover-title" style="display: none;">Recuperar Senha</h6>
-                  <div class="form-group">
-                      <label for="login-email">E-mail</label>
-                      <input type="email" id="login-email" name="email" class="input-form" placeholder="Digite seu e-mail">
-                  </div>
-                  <div class="form-group" id="password-group">
-                      <div class="d-flex justify-content-between">
-                          <label for="login-password">Senha</label>
-                          <label id="forget-password" class="text-muted forget-password" style="cursor: pointer;">Esqueceu a senha?</label>
-                      </div>
-                      <input type="password" id="login-password" name="senha" class="input-form" placeholder="Digite sua senha">
-                  </div>
-                  <a href="/curso-andamento-disponivel"><button class="button-login">Entrar</button></a>
-                
-              </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <div class="container-fluid container-principal">
     <div class="row">
         <!-- Coluna esquerda: Vídeo principal -->
@@ -166,9 +88,10 @@
             <div class="voice-chat-card">
               <div class="video-placeholder">
                 <div class="play-icon">
-                    <i class="ri-play-circle-fill"></i>
+                    
                 </div>
-            </div>
+                <img src="../static/cursos/intro.jpg" alt="Introdução" class="img-intro">
+              </div>
               <div class="voice-chat-card-body">
                 <div class="audio-container">
                   <audio controls="">
@@ -196,8 +119,8 @@
               <ul class="blocked-list list-unstyled">
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/cursoHtml.jpg" alt="curso Html">
                     </div>
                   
                     <div class="card_data">
@@ -213,7 +136,7 @@
                         </div>
                       </div>
                       <div class="div-btn">
-                        <button class="access-button" data-bs-toggle="modal" data-bs-target="#authModal">
+                        <button class="access-button">
                           <i class="ri-play-circle-fill"></i>
                           <span>Acessar</span>
                         </button>
@@ -224,8 +147,8 @@
                 
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/css.jpg" alt="curso CSS">                   
                     </div>
                   
                     <div class="card_data">
@@ -240,15 +163,20 @@
                           </label>
                         </div>
                       </div>
-                      
+                      <div class="div-btn">
+                        <button class="access-button">
+                          <i class="ri-play-circle-fill"></i>
+                          <span>Acessar</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </li>
 
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/js.jpg" alt="curso JavaScript">
                     </div>
                   
                     <div class="card_data">
@@ -263,15 +191,20 @@
                           </label>
                         </div>
                       </div>
-                      
+                      <div class="div-btn">
+                        <button class="access-button">
+                          <i class="ri-play-circle-fill"></i>
+                          <span>Acessar</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </li>
 
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/primeirosite.jpg" alt="curso primeiro site">
                     </div>
                   
                     <div class="card_data">
@@ -286,15 +219,20 @@
                           </label>
                         </div>
                       </div>
-                      
+                      <div class="div-btn">
+                        <button class="access-button">
+                          <i class="ri-play-circle-fill"></i>
+                          <span>Acessar</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </li>
 
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/dados.jpg" alt="curso coleta de dados">
                     </div>
                   
                     <div class="card_data">
@@ -309,7 +247,12 @@
                           </label>
                         </div>
                       </div>
-                      
+                      <div class="div-btn">
+                        <button class="access-button">
+                          <i class="ri-play-circle-fill"></i>
+                          <span>Acessar</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -317,8 +260,8 @@
 
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/css2.jpg" alt="curso CSS">
                     </div>
                   
                     <div class="card_data">
@@ -333,15 +276,20 @@
                           </label>
                         </div>
                       </div>
-                      
+                      <div class="div-btn">
+                        <button class="access-button">
+                          <i class="ri-play-circle-fill"></i>
+                          <span>Acessar</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </li>
 
                 <li class="blocked">
                   <div class="card-style">
-                    <div class="card_form">
-                      <i class="ri-lock-fill lock-icon"></i>
+                    <div class="card_form img-curso">
+                      <img src="../static/cursos/js2.jpg" alt="curso JavaScript">
                     </div>
                   
                     <div class="card_data">
@@ -356,7 +304,12 @@
                           </label>
                         </div>
                       </div>
-                      
+                      <div class="div-btn">
+                        <button class="access-button">
+                          <i class="ri-play-circle-fill"></i>
+                          <span>Acessar</span>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </li>
@@ -375,13 +328,14 @@
         </div> 
     </div>
   </div>
+      
  
   <footer class="main-footer py-2 text-white mt-4">
     <div class="container">
       <div class="d-flex flex-column flex-md-row mt-4 justify-content-between align-items-start">
         <!-- Logo -->
         <div class="col-12 col-md-auto mb-3 mb-md-0">
-          <a href="/">
+          <a href="index.html">
             <img loading="lazy" src="../static/logomarca/logomarca.png" class="logo-image">
           </a>
         </div>
@@ -389,10 +343,10 @@
         <!-- Links -->
         <div class="col-12 col-md-auto">
           <ul class="list-unstyled nossosProdutos d-flex flex-column flex-md-row text-start text-md-end">
-            <li class="mb-2 mb-md-0"><a href="/sou-reabilitacao" class="text-white" style="margin-right: 15px;">Sou Casa de Reabilitação</a></li>
-            <li class="mb-2 mb-md-0"><a href="/sou-instituicao" class="text-white" style="margin-right: 15px;">Sou Instituição de Ensino</a></li>
-            <li class="mb-2 mb-md-0"><a href="/sobre-nos" class="text-white" style="margin-right: 15px;">Sobre Nós</a></li>
-            
+            <li class="mb-2 mb-md-0"><a href="sou-reabilitacao.html" class="text-white" style="margin-right: 15px;">Sou Casa de Reabilitação</a></li>
+            <li class="mb-2 mb-md-0"><a href="sou-instituicao.html" class="text-white" style="margin-right: 15px;">Sou Instituição de Ensino</a></li>
+            <li class="mb-2 mb-md-0"><a href="sobre-nos.html" class="text-white" style="margin-right: 15px;">Sobre Nós</a></li>
+           
           </ul>
         </div>
       </div>
@@ -425,6 +379,6 @@
 <!-- Incluindo Bootstrap CSS e JS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="../static/js/switch-login.js"></script>
+
 </body>
 </html>                                

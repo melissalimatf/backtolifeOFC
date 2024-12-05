@@ -1,37 +1,198 @@
 
 .custom li{
-    background-color: rgb(224, 232, 247);
-    width: 8%;
-    padding: 10px;
-    border-radius: 28px;
-    text-align: center;
-    font-weight: 600;
-    color: #15519A;
-    font-size: 15px;
+  background-color: rgb(224, 232, 247);
+  width: 110%;
+  padding: 10px;
+  border-radius: 28px;
+  text-align: center;
+  font-weight: 600;
+  color: #15519A;
+  font-size: 15px;
 }
 .favoritados-container h1 {
-    color: #15519A;
-    font-size: 43px;
-    font-weight: 700;
+  color: #15519A;
+  font-size: 43px;
+  font-weight: 700;
 }
 .favoritados-container h3 {
-    color: #414142;
-    font-size: 1.2rem;
-    font-weight:400;
+  color: #6a87c9;
+  font-size: 1.2rem;
+  font-weight:400;
 }
 .favoritados-container img{
-    height: 350px;
-    width: auto;
-    object-fit: cover;
+  height: 360px;
+  width: auto;
+  object-fit: cover;
 }
 .team-page img{
-    border-radius: 15px;
-    height: 200px;
-    width: 380px;
-    object-fit: cover;
+  border-radius: 15px;
+  height: 160px;
+  width: 340px;
+  object-fit: cover;
 }
 .team-page h1{
-    color: #000;
-    font-size: 1.4rem;
-    font-weight: 400;
+  color: #1e3390;
+  font-size: 1.3rem;
+  font-weight:400;
+}
+
+.card-style {
+  position: relative;
+  display: flex;
+  width: 550px;
+  padding: 10px;
+  border-radius: 6px;
+  gap: 0.5rem;
+  height: max-content;
+  border: 1px solid #bebebe;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+}
+.card_form {
+  position: relative;
+  border-radius: 4px;
+  background-size: cover;
+  align-items: center;
+  padding: 60px;
+  transition: 0.2s ease-in-out;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.lock-icon {
+  font-size: 2.5em;
+  color: rgb(88, 82, 204); 
+}
+
+.card_data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.access-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em; 
+  background-color: #061f48; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.1em 0.8em;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out; 
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.access-button i{
+ font-size: 1.3rem;
+}
+.access-button:hover {
+  background-color: #3a54bd; 
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 0.5em;
+  color: rgb(64, 64, 64);
+}
+.text_m {
+  font-size: 0.9em;
+}
+.text_s {
+  color: #1d369b;
+  font-size: 0.6em;
+}
+.text_d {
+  font-size: 0.7em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  width: 80%;
+}
+
+.cube {
+  width: max-content;
+  height: 10px;
+  transition: all 0.2s;
+  transform-style: preserve-3d;
+}
+.card-style:hover .cube {
+  transform: rotateX(90deg);
+}
+.side {
+  width: max-content;
+  height: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+.top {
+  transform: rotateX(-90deg) translate3d(0, 0, 0em);
+}
+.front {
+  transform: translate3d(0, 0, 1em);
+}
+.div-btn{
+  display: inline-flex;
+  align-items: end;
+}
+
+
+@media (max-width: 768px) {
+.title-container h2 {
+  font-size: 2rem;
+}
+
+.title-container h5 {
+  font-size: 1.1rem;
+}
+
+.title-container p {
+  font-size: 1rem;
+}
+.title-container {
+margin-left: 0px;
+margin: 10px;
+}
+.card-style {
+width: 330px;
+}
+.card_data {
+display: block;
+}
+.access-button {
+margin-top: 10px;
+}
+.custom li{
+background-color: rgb(224, 232, 247);
+width: 120%;
+padding: 10px;
+border-radius: 28px;
+text-align: center;
+font-weight: 600;
+color: #15519A;
+font-size: 15px;
+}
+.favoritados-container img{
+height: 360px;
+width: auto;
+object-fit: cover;
+margin-top: -10px!important;
+}
+.team-page{
+margin-top: 370px!important;
+}
 }

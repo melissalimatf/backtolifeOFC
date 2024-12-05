@@ -1,7 +1,7 @@
 
-
 footer.main-footer {
   margin-top: auto;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
   .main-footer {
@@ -22,20 +22,20 @@ footer.main-footer {
     margin-bottom: 20px;
     text-align: left;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 400;
     color: var(--bs-gray-400);
   }
   .main-footer a,
   .main-footer li {
     text-decoration: none;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 500;
     line-height: 2rem;
   
   }
   .copy{
     line-height: 1rem;
-    font-size: 11px;
+    font-size: 13px;
   }
   .logoFooterContainer{
     margin-bottom: 35px;

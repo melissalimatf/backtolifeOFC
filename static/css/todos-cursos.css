@@ -1,0 +1,181 @@
+.box {
+    background-color: #f3f3f3;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    gap: 50px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.info-1 h2 {
+    font-size: 30px;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.info-1 p {
+    color: #0d339b;
+    margin-top: 20px;
+}
+.info-2 span {
+    font-weight: bold;
+}
+
+ .info-2 input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    width: 130%;
+} 
+ .info-2 button {
+    font-size: 16px;
+    color: white;
+    background-color: #0056b3 ;
+    border: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+    height: 100%;
+    width: 12%;
+    padding: 10px;
+    margin-left: 70px;
+    margin-top: 16px;
+ }
+
+.info-2 button:hover {
+    background-color: #007bff;
+}
+
+.institutions {
+    display: flex;
+    justify-content: center;
+}
+.institution-card {
+    margin-top: 60px;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.institution-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+}
+
+.institution-card img {
+    height: 220px;
+    width: 350px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+    border-radius: 20px;
+}
+
+
+/*Section CURSOS DISPONIVEIS*/
+.section-locais {
+    background-color: #f8f8f8;
+    padding: 25px 0; /* Adiciona um pouco de espaçamento vertical */
+}
+.section-locais .title-locais h1 {
+    color: #000000;
+    font-weight: 700;
+    font-size: 32px;
+    text-transform: uppercase;
+font-family: Arial, Helvetica, sans-serif;
+}
+.locais-container .card-local {
+    margin-bottom: 20px;
+}
+.locais-container .card {
+    box-shadow: 0px 9px 17px 0px rgba(0,0,0,0.1);
+    border: none; 
+}
+.locais-container .btn-alugar{
+  background-color: #020202; 
+  color: #fff;
+  border: none; 
+  cursor: pointer;
+}
+.carousel .card-img-top {
+  height: 220px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+.locais-container .card-img-top {
+    height: 220px;
+    border-radius: 3px;
+    object-fit: cover;
+}
+.locais-container .card-title {
+    font-weight: bold; 
+    font-family: Arial, Helvetica, sans-serif;
+}
+.locais-container .card-text{
+  color: #555555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.locais-container .custom-li,
+.carousel .custom-li {
+  background-color: rgb(25, 25, 25) !important;
+  color: #ececec !important;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 22px;
+  padding: 7px;
+  list-style: none;
+  width: 47%;
+  margin-left: -4px;
+  text-align: center;
+  font-size: 14px;
+}
+.locais-container .custom-li label {
+  cursor: pointer;
+}
+
+.btn-escolherCarro{
+  background-color: #0f2e70!important;
+  color: #fff!important;
+  border: none;
+  padding: 15px !important;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  margin-top: 23px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-escolherCarro{
+  padding: 10px !important;
+  margin-top: 15px!important;
+}
+
+.btn-escolherCarro:hover{
+    box-shadow: 0px 0px 0px 2px #FFFFFF, 0px 0px 0px 4px #b3bfea;
+}
+
+@media (max-width: 768px) {
+    .box {
+        padding: 30px ;
+    }
+
+.info-2 button {
+   font-size: 16px;
+   color: white;
+   background-color: #0056b3 ;
+   border: none;
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   margin-left: 10px;
+   cursor: pointer;
+   height: 100%;
+   width: 20%;
+   padding: 10px;
+   margin-left: 60px;
+   margin-top: 16px;
+}
+}

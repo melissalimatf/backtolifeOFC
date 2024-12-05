@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="../static/logomarca/logomarca.png" type="image/x-icon">
+  <title>Back to life - cursos</title>
+  <link rel="stylesheet" href="../static/css/header.css">
+  <link rel="stylesheet" href="../static/css/todos-cursos.css">
+  <link rel="stylesheet" href="../static/css/footer.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+
+<body class="content-wrapper">
+  <header>
+    <div class="container-fluid">
+      <nav class="navbar-expand-lg  headerCss mt-4">
+          <a class="navbar-brand col-sm-2" href="/">
+              <img src="../static/logomarca/logomarca.png" alt="Logomarca">
+          </a>
+
+          <div class="navbar-collapse justify-content-end" id="hero">
+              <ul class="navbar-navCss">
+                    <li class="nav-item d-none d-md-block">
+                        <a href="/sou-reabilitacao" class="btn" style="border: none;">
+                            Instituições de Reabilitação
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a href="/sou-instituicao" class="btn" style="border: none;">
+                            Instituição de Ensino
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                        <a href="/sobre-nos" class="btn" style="border: none;">
+                            Sobre Nós
+                        </a>
+                    </li>
+                    <li class="nav-item d-none d-md-block">
+                      <a href="/login" class="btn" style="border: none;">
+                          <div>
+                              <svg xmlns="http://www.w3.org/2000/svg" style="margin-top: -4px;" width="24" height="24" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                                  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                              </svg>
+                              <span class="usuario-conta boldIcon" id="usuario-conta">Login</span>
+                          </div>
+                      </a>
+                  </li>
+
+                  <!-- Dropdown para dispositivos móveis -->
+                  <li class="nav-item dropdown d-md-none text-end">
+                    <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <i class="ri-menu-line"></i> <!-- Ícone de menu hambúrguer -->
+                    </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item text-white" href="/sou-reabilitacao">Sou Casa de Reabilitação</a></li>
+                          <li><a class="dropdown-item text-white" href="/instituicoes-ensino">Sou Instituição de Ensino</a></li>
+                          <li><a class="dropdown-item text-white" href="/sobre-nos">Sobre Nós</a></li>
+                          <li><a class="dropdown-item text-white" href="/login">Sair</a></li>
+                      </ul>
+                  </li>
+              </ul>
+          </div>   
+      </nav>   
+    </div>
+  </header>
+
+
+  <main class="container-md">
+    <section class="d-block d-md-flex box">
+        <div class="info-1 col-md-8">
+            <h2>Explore os cursos disponíveis e invista no seu aprendizado!</h2>
+                <p>Encontre o curso perfeito para alcançar seus objetivos.</p>
+        </div>
+        <div class="info-2 col-md-4">
+            <div class="d-flex">
+              <div>
+                <input type="text" id="search-input" class="mt-3 mb-3 form-control" placeholder="Digite um tema">
+              </div>
+              <button class="btn btn-primary"><i class="ri-search-line"></i>
+              </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="locais-container container-md" style="padding: 0;">
+      <div class="row mt-4">
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Instalação de Painéis e Suportes</h5>
+                            <p class='card-text'>Aprenda a instalar suportes para TV, painéis e outros acessórios residenciais.</p>
+                            
+                              <img src="../static/cursos/curso1.jpg" class="card-img-top mx-auto" alt="Curso 1">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Excel para Negócios</h5>
+                            <p class='card-text'>Descubra como otimizar suas planilhas e automatizar processos no dia a dia empresarial.</p>
+                            
+                              <img src="../static/cursos/curso2.jpg" class="card-img-top mx-auto" alt="Curso 2">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Técnicas Básicas de Corte de Cabelo</h5>
+                            <p class='card-text'>Inicie sua jornada como cabeleireiro aprendendo cortes simples e tendências.</p>
+                            
+                              <img src="../static/cursos/curso3.jpg" class="card-img-top mx-auto" alt="Curso 3">
+                       
+                            <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="locais-container container-md" style="padding: 0;">
+      <div class="row mt-4">
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Desenvolvimento de Jogos</h5>
+                            <p class='card-text'>Crie seus próprios games e domine as ferramentas da indústria.</p>
+                            
+                              <img src="../static/cursos/games.jpeg" class="card-img-top mx-auto" alt="Curso 1">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Cibersegurança</h5>
+                            <p class='card-text'> Proteja sistemas e dados, garantindo a segurança dos seu softwares.</p>
+                            
+                              <img src="../static/cursos/ciber.jpg" class="card-img-top mx-auto" alt="Curso 2">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Análise de Dados</h5>
+                            <p class='card-text'>Extraia insights valiosos a partir de grandes volumes de dados.</p>
+                            
+                              <img src="../static/cursos/analisedados.jpeg" class="card-img-top mx-auto" alt="Curso 3">
+                       
+                            <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="locais-container container-md" style="padding: 0;">
+      <div class="row mt-4">
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Técnico em Radiologia</h5>
+                            <p class='card-text'>Realize exames de imagem e auxilie no diagnóstico médico.</p>
+                            
+                              <img src="../static/cursos/radiologia.jpeg" class="card-img-top mx-auto" alt="Curso 1">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Enfermagem</h5>
+                            <p class='card-text'>Cuide da saúde e bem-estar de pacientes em diversos ambientes.</p>
+                            
+                              <img src="../static/cursos/enfermagem.jpeg" class="card-img-top mx-auto" alt="Curso 2">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Estética</h5>
+                            <p class='card-text'>Realize tratamentos estéticos e valorize a <br>beleza natural.</p>
+                            
+                              <img src="../static/cursos/estetica.jpeg" class="card-img-top mx-auto" alt="Curso 3">
+                       
+                            <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+
+
+    <div class="locais-container container-md" style="padding: 0;">
+      <div class="row mt-4">
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Marketing Digital</h5>
+                            <p class='card-text'>Crie campanhas eficazes e domine as ferramentas de marketing online.</p>
+                            
+                              <img src="../static/cursos/marketing.jpeg" class="card-img-top mx-auto" alt="Curso 1">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Gestão de Recursos Humanos</h5>
+                            <p class='card-text'>Desenvolva e gerencie equipes de <br>alta performance.</p>
+                            
+                              <img src="../static/cursos/gestao.jpeg" class="card-img-top mx-auto" alt="Curso 2">
+                       
+                              <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+
+          <div class="card-local col-md-4">
+                <div class='card' style='border-radius:10px;'>
+                    <div class='card-body'>
+                            <h5 class='card-title'>Logística</h5>
+                            <p class='card-text'>Otimize processos e gerencie a cadeia de <br>suprimentos.</p>
+                            
+                              <img src="../static/cursos/logistica.jpeg" class="card-img-top mx-auto" alt="Curso 3">
+                       
+                            <a href="curso-andamento.html" class='btn btn-escolherCarro w-100'>Ver Curso</a>
+                    </div>
+                </div>
+          </div>
+      </div>
+    </div>
+</main>
+
+   
+  
+    <footer class="main-footer py-2 text-white">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row mt-4 justify-content-between align-items-start">
+          <!-- Logo -->
+          <div class="col-12 col-md-auto mb-3 mb-md-0">
+            <a href="/">
+              <img loading="lazy" src="../static/logomarca/logomarca.png" class="logo-image">
+            </a>
+          </div>
+  
+          <!-- Links -->
+          <div class="col-12 col-md-auto">
+            <ul class="list-unstyled nossosProdutos d-flex flex-column flex-md-row text-start text-md-end">
+              <li class="mb-2 mb-md-0"><a href="/sou-reabilitacao" class="text-white" style="margin-right: 15px;">Sou Casa de Reabilitação</a></li>
+              <li class="mb-2 mb-md-0"><a href="/sou-instituicao" class="text-white" style="margin-right: 15px;">Sou Instituição de Ensino</a></li>
+              <li class="mb-2 mb-md-0"><a href="/sobre-nos" class="text-white" style="margin-right: 15px;">Sobre Nós</a></li>
+            
+            </ul>
+          </div>
+        </div>
+  
+        <div class="copy mb-3 mt-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="col-md-6">
+              <p class="text-white">
+                &copy; <span id="currentYear"></span>
+                <a href="https://www.instagram.com/yoursystem_br/" style="color: #fff; font-weight:400;">@unit</a>. 
+                Todos os direitos reservados.
+              </p>
+            </div>
+  
+            <div class="col-md-6 text-end">
+              <address class="text-white">
+               Av. Mal. Mascarenhas de Morais, 3905 | Imbiribeira, Recife - PE
+              </address>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
+  
+  <!--  bibliotecas -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- Incluindo Bootstrap CSS e JS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+  </html>                                

@@ -23,7 +23,7 @@
 
 .cta-text h2,
 .cta-text p{
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
   .cta-horizontal {
     background-image: url('../background/backimg.png');
@@ -137,7 +137,7 @@ body{
 .hero-section h3{
   padding-top: 55px!important;
   padding-bottom: 10px!important;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .hero-section img{
   width: 100%;
@@ -152,7 +152,7 @@ body{
   list-style: none;
   font-weight:400;
   margin-top: 15px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
 }
 
@@ -187,17 +187,14 @@ body{
 }
 /*HERO*/
 .hero-section h1{
- font-size: 50px;
- padding-bottom: 20px;
- font-family:Arial, Helvetica, sans-serif;
+ font-size: 60px;
  text-transform: uppercase;
- font-weight: 500;
- width: 90%;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .hero-section p{
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 300;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   width: 90%;
   }
 .btn-color {
@@ -220,7 +217,7 @@ body{
     font-weight: 700;
     font-size: 32px;
     text-transform: uppercase;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .locais-container .card-local {
     margin-bottom: 20px;
@@ -247,11 +244,11 @@ body{
 }
 .locais-container .card-title {
     font-weight: bold; 
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .locais-container .card-text{
   color: #555555;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .locais-container .custom-li,
 .carousel .custom-li {
@@ -272,7 +269,7 @@ body{
 }
 
 .btn-escolherCarro{
-  background-color: #061f48!important;
+  background-color: #0f2e70!important;
   color: #fff!important;
   border: none;
   padding: 15px !important;
@@ -282,7 +279,7 @@ body{
   font-size: 16px;
   letter-spacing: 0.3px;
   margin-top: 23px;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .btn-escolherCarro{
@@ -324,15 +321,13 @@ body{
       display: none!important;
    }
    .text-smart h1{
-    font-size: 36px!important;
-    margin-top: -10px;
-    width: 100%;
-    font-family:Arial, Helvetica, sans-serif;
+    font-size: 40px!important;
+    margin-top: -45px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
    .text-smart p{
-    font-family:Arial, Helvetica, sans-serif;
-    margin-top: -20px;
-    font-size: 16px;
+    font-size: 18px!important;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
    }
 
    .cta-horizontal .cta-button {
@@ -345,11 +340,11 @@ body{
     border-radius: 4px;
     transition: background-color 0.3s;
     margin-bottom: -15px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   .cta-horizontal .cta-text p {
     margin-bottom: 30px;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 }
 
@@ -372,7 +367,7 @@ body{
   cursor: pointer;
   overflow: hidden;
   transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .animated-button svg {
@@ -408,7 +403,7 @@ body{
   z-index: 1;
   transform: translateX(-12px);
   transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .animated-button:hover {
@@ -427,7 +422,7 @@ body{
 
 .animated-button:hover .text {
   transform: translateX(12px);
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .animated-button:hover svg {

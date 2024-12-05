@@ -1,8 +1,8 @@
 main {
     margin: 0;
-    font-family: Arial, sans-serif;
     background-color: #f9f9f9;
     color: #333;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .container-principal {
     display: flex;
@@ -42,7 +42,7 @@ main {
 }
 
 .sidebar nav ul li a:hover {
-    color: #007bff;
+    color: #0170e7;
 }
 .main-content {
     flex: 1;
@@ -72,4 +72,53 @@ main {
 }
 .menuEscolhido{
   font-weight: 700;
+}
+
+@media (max-width: 768px) {
+/* Definindo a barra lateral inicialmente oculta para mobile */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* Oculta a barra lateral à esquerda */
+    width: 250px;
+    height: 100%;
+    background-color: #e8eff9;
+    transition: left 0.3s ease; /* Animação de deslizamento */
+    padding: 15px;
+    z-index: 1000;
+
+}
+
+/* Barra lateral visível ao clicar no botão */
+.sidebar.open {
+    left: 0; /* Move a sidebar para a posição original */
+}
+
+/* Estilo do botão de menu no mobile */
+#sidebar-toggle {
+    top: 20px;
+    left: 20px;
+    margin-bottom: 20px;
+    background-color:#5096ec;
+    border: none;
+    color: white;
+    font-size: 16px;
+    z-index: 10;
+    text-transform: capitalize;
+}
+#sidebar-toggle i{
+ font-size: 16px;
+ margin-right: 5px;
+}
+#sidebar-close {
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 1010; 
+}
+.sidebar h2{
+    margin-top: 18px;
+}
 }
